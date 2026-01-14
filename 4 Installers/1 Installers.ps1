@@ -175,6 +175,24 @@ Write-Host "Installing: Google Chrome . . ."
 Get-FileFromWeb -URL "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi" -File "$env:TEMP\Chrome.msi"
 # install google chrome
 Start-Process -wait "$env:TEMP\Chrome.msi" -ArgumentList "/quiet"
+# chrome tweaks
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'PrivacySandboxSiteEnabledAdsEnabled' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'WebRtcEventLogCollectionAllowed' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'PrivacySandboxAdTopicsEnabled' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'UrlKeyedAnonymizedDataCollectionEnabled' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'RemoteAccessHostRequireCurtain' /t REG_DWORD /d '1' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'SafeBrowsingProtectionLevel' /t REG_DWORD /d '1' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'SafeBrowsingExtendedReportingEnabled' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'RemoteAccessHostFirewallTraversal' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'SafeBrowsingSurveysEnabled' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'PrivacySandboxAdMeasurementEnabled' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'RemoteAccessHostAllowClientPairing' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'PrivacySandboxPromptEnabled' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'BlockThirdPartyCookies' /t REG_DWORD /d '1' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'CloudReportingEnabled' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'HardwareAccelerationModeEnabled' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'BackgroundModeEnabled' /t REG_DWORD /d '0' /f | Out-Null
+Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'HighEfficiencyModeEnabled' /t REG_DWORD /d '1' /f | Out-Null
 # open ublock origin in web browser
 Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh?hl=en"
 show-menu
