@@ -587,6 +587,10 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\GameBar]
 "UseNexusForGameBarEnabled"=dword:00000000
 
+; disable use as guide button in apps
+[HKEY_CURRENT_USER\Software\Microsoft\GameBar]
+"GamepadNexusChordEnabled"=dword:00000000
+
 ; enable game mode
 [HKEY_CURRENT_USER\Software\Microsoft\GameBar]
 "AutoGameModeEnabled"=dword:00000001
@@ -649,6 +653,16 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\input\Settings]
 "InsightsEnabled"=dword:00000000
 
+; disable language bar
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\CTF\LangBar]
+"ShowStatus"=dword:00000003
+
+; disable language hotkey
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+"Language Hotkey"="3"
+"Hotkey"="3"
+"Layout Hotkey"="3"
+
 
 
 
@@ -665,9 +679,12 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\Maps]
 "AutoUpdateEnabled"=dword:00000000
 
-; disable archive apps 
+; disable archive apps
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Appx]
 "AllowAutomaticAppArchiving"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\InstallService\Stubification\S-1-5-21-160795866-973872169-1902900476-1000]
+"EnableAppOffloading"=dword:00000000
 
 
 
@@ -983,25 +1000,6 @@ E0,F6,C5,D5,0E,CA,50,00,00
 
 
 
-; CHROME
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome]
-"StartupBoostEnabled"=dword:00000000
-"HardwareAccelerationModeEnabled"=dword:00000000
-"BackgroundModeEnabled"=dword:00000000
-"HighEfficiencyModeEnabled"=dword:00000001
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\GoogleChromeElevationService]
-"Start"=dword:00000004
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\gupdate]
-"Start"=dword:00000004
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\gupdatem]
-"Start"=dword:00000004
-
-
-
-
 ; NVIDIA
 ; disable nvidia tray icon
 [HKEY_CURRENT_USER\Software\NVIDIA Corporation\NvTray]
@@ -1165,6 +1163,104 @@ E0,F6,C5,D5,0E,CA,50,00,00
 ; enable endtask menu taskbar w11
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\TaskbarDeveloperSettings]
 "TaskbarEndTask"=dword:00000001
+
+; more info on bsod
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\CrashControl]
+"DisplayParameters"=dword:00000001
+
+; enable long paths
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+"LongPathsEnabled"=dword:00000001
+
+; disable windows platform binary table
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager]
+"DisableWpbtExecution"=dword:00000001
+
+; no web services in explorer
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoWebServices"=dword:00000001
+
+; disable windows ai
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowCopilotButton"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsCopilot]
+"TurnOffWindowsCopilot"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsAI]
+"DisableAIDataAnalysis"=dword:00000001
+"AllowRecallEnablement"=dword:00000000
+"DisableClickToDo"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Shell\Copilot\BingChat]
+"IsUserEligible"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Paint]
+"DisableGenerativeFill"=dword:00000001
+"DisableCocreator"=dword:00000001
+"DisableImageCreator"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\WindowsNotepad]
+"DisableAIFeatures"=dword:00000001
+
+; disable cross device resume
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CrossDeviceResume\Configuration]
+"IsResumeAllowed"=dword:00000000
+"IsOneDriveResumeAllowed"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\Connectivity\DisableCrossDeviceResume]
+"value"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\8\1387020943]
+"EnabledState"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\8\1694661260]
+"EnabledState"=dword:00000001
+
+; hide home in settings
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"SettingsPageVisibility"="hide:home;"
+
+; new 25h2 start menu
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\3036241548]
+"EnabledState"=dword:00000002
+"EnabledStateOptions"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\2792562829]
+"EnabledState"=dword:00000002
+"EnabledStateOptions"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\762256525]
+"EnabledState"=dword:00000002
+"EnabledStateOptions"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\734731404]
+"EnabledState"=dword:00000002
+"EnabledStateOptions"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\2114784909]
+"EnabledState"=dword:00000002
+"EnabledStateOptions"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\905601679]
+"EnabledState"=dword:00000002
+"EnabledStateOptions"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\1853569164]
+"EnabledState"=dword:00000002
+"EnabledStateOptions"=dword:00000000
+
+; set start menu apps view to list
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Start]
+"AllAppsViewMode"=dword:00000002
+
+; disable phone companion in start menu
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Start]
+"RightCompanionToggledOpen"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Start\Companions\Microsoft.YourPhone_8wekyb3d8bbwe]
+"IsEnabled"=dword:00000000
+"IsAvailable"=dword:00000000
 "@
 Set-Content -Path "$env:TEMP\Registry Optimize.reg" -Value $MultilineComment -Force
 # edit reg file
@@ -1736,6 +1832,10 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\GameBar]
 "UseNexusForGameBarEnabled"=-
 
+; enable use as guide button in apps
+[HKEY_CURRENT_USER\Software\Microsoft\GameBar]
+"GamepadNexusChordEnabled"=-
+
 ; game mode
 [HKEY_CURRENT_USER\Software\Microsoft\GameBar]
 "AutoGameModeEnabled"=-
@@ -1798,6 +1898,16 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\input\Settings]
 "InsightsEnabled"=-
 
+; language bar
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\CTF\LangBar]
+"ShowStatus"=-
+
+; language hotkey
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+"Language Hotkey"=-
+"Hotkey"=-
+"Layout Hotkey"=-
+
 
 
 
@@ -1817,6 +1927,9 @@ Windows Registry Editor Version 5.00
 ; archive apps
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Appx]
 "AllowAutomaticAppArchiving"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\InstallService\Stubification\S-1-5-21-160795866-973872169-1902900476-1000]
+"EnableAppOffloading"=-
 
 
 
@@ -2277,6 +2390,107 @@ Windows Registry Editor Version 5.00
 ; disable endtask menu taskbar w11
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\TaskbarDeveloperSettings]
 "TaskbarEndTask"=dword:00000000
+
+; remove more info on bsod
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\CrashControl]
+"DisplayParameters"=dword:00000000
+
+; long paths
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+"LongPathsEnabled"=-
+
+; windows platform binary table
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager]
+"DisableWpbtExecution"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager]
+"DisableWpbtExecution"=-
+
+; web services in explorer
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoWebServices"=-
+
+; windows ai
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowCopilotButton"=-
+
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsCopilot]
+"TurnOffWindowsCopilot"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsAI]
+"DisableAIDataAnalysis"=-
+"AllowRecallEnablement"=-
+"DisableClickToDo"=-
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Shell\Copilot\BingChat]
+"IsUserEligible"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Paint]
+"DisableGenerativeFill"=-
+"DisableCocreator"=-
+"DisableImageCreator"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\WindowsNotepad]
+"DisableAIFeatures"=-
+
+; cross device resume
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CrossDeviceResume\Configuration]
+"IsResumeAllowed"=-
+"IsOneDriveResumeAllowed"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\Connectivity\DisableCrossDeviceResume]
+"value"-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\8\1387020943]
+"EnabledState"-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\8\1694661260]
+"EnabledState"-
+
+; home in settings
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"SettingsPageVisibility"=-
+
+; remove 25h2 start menu
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\3036241548]
+"EnabledState"=-
+"EnabledStateOptions"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\2792562829]
+"EnabledState"=-
+"EnabledStateOptions"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\762256525]
+"EnabledState"=-
+"EnabledStateOptions"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\734731404]
+"EnabledState"=-
+"EnabledStateOptions"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\2114784909]
+"EnabledState"=-
+"EnabledStateOptions"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\905601679]
+"EnabledState"=-
+"EnabledStateOptions"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\14\1853569164]
+"EnabledState"=-
+"EnabledStateOptions"=-
+
+; set start menu apps view to category
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Start]
+"AllAppsViewMode"=dword:00000000
+
+; phone companion in start menu
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Start]
+"RightCompanionToggledOpen"=-
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Start\Companions\Microsoft.YourPhone_8wekyb3d8bbwe]
+"IsEnabled"=-
+"IsAvailable"=-
 "@
 Set-Content -Path "$env:TEMP\Registry Defaults.reg" -Value $MultilineComment -Force
 # edit reg file
