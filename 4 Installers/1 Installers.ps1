@@ -61,14 +61,15 @@
     Write-Host " 7. Escape From Tarkov"
     Write-Host " 8. GOG launcher"
     Write-Host " 9. Google Chrome"
-    Write-Host "10. League Of Legends"
-    Write-Host "11. Notepad ++"
-    Write-Host "12. OBS Studio"
-	Write-Host "13. Roblox"
-    Write-Host "14. Rockstar Games"
-    Write-Host "15. Steam"
-    Write-Host "16. Ubisoft Connect"
-    Write-Host "17. Valorant"
+    Write-Host "10. Firefox"
+    Write-Host "11. League Of Legends"
+    Write-Host "12. Notepad ++"
+    Write-Host "13. OBS Studio"
+	Write-Host "14. Roblox"
+    Write-Host "15. Rockstar Games"
+    Write-Host "16. Steam"
+    Write-Host "17. Ubisoft Connect"
+    Write-Host "18. Valorant"
 	              }
 	show-menu
     while ($true) {
@@ -183,6 +184,21 @@ show-menu
    10 {
 
 Clear-Host
+Write-Host "Installing: Firefox . . ."
+# Download Firefox
+$FirefoxInstaller = "$env:TEMP\Firefox.exe"
+Get-FileFromWeb -URL "https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US" -File $FirefoxInstaller
+# Install Firefox
+Start-Process -FilePath $FirefoxInstaller `
+    -ArgumentList "/S" `
+    -Wait `
+    -NoNewWindow
+show-menu
+
+      }
+   11 {
+
+Clear-Host
 Write-Host "Installing: League Of Legends . . ."
 # download league of legends
 Get-FileFromWeb -URL "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.exe" -File "$env:TEMP\League Of Legends.exe"
@@ -191,7 +207,7 @@ Start-Process "$env:TEMP\League Of Legends.exe"
 show-menu
 
       }
-   11 {
+   12 {
 
 Clear-Host
 Write-Host "Installing: Notepad ++ . . ."
@@ -284,7 +300,7 @@ Set-Content -Path "$env:AppData\Notepad++\config.xml" -Value $MultilineComment -
 show-menu
 
       }
-   12 {
+   13 {
 
 Clear-Host
 Write-Host "Installing: OBS Studio . . ."
@@ -295,7 +311,7 @@ Start-Process -wait "$env:TEMP\OBS Studio.exe" -ArgumentList "/S"
 show-menu
 
       }
-   13 {
+   14 {
 
 Clear-Host
 Write-Host "Installing: Roblox . . ."
@@ -306,7 +322,7 @@ Start-Process "$env:TEMP\Roblox.exe"
 show-menu
 
       }
-   14 {
+   15 {
 
 Clear-Host
 Write-Host "Installing: Rockstar Games . . ."
@@ -317,7 +333,7 @@ Start-Process "$env:TEMP\Rockstar Games.exe"
 show-menu
 
       }
-   15 {
+   16 {
 
 Clear-Host
 Write-Host "Installing: Steam . . ."
@@ -328,7 +344,7 @@ Start-Process -wait "$env:TEMP\Steam.exe" -ArgumentList "/S"
 show-menu
 
       }
-   16 {
+   17 {
 
 Clear-Host
 Write-Host "Installing: Ubisoft Connect . . ."
@@ -339,7 +355,7 @@ Start-Process -wait "$env:TEMP\Ubisoft Connect.exe" -ArgumentList "/S"
 show-menu
 
       }
-   17 {
+   18 {
 
 Clear-Host
 Write-Host "Installing: Valorant . . ."
