@@ -41,13 +41,13 @@
     }
     }
 
-Write-Host "Installing: Furk Mark . . ."
-# download furkmark
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/Furk%20Mark.zip" -File "$env:TEMP\Furk Mark.zip"
+Write-Host "Installing: FurMark . . ."
+# download furmark
+Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/Fur%20Mark.zip" -File "$env:TEMP\FurMark.zip"
 # extract files
-Expand-Archive "$env:TEMP\Furk Mark.zip" -DestinationPath "$env:TEMP\Furk Mark" -ErrorAction SilentlyContinue
-# start furkmark
-Start-Process "$env:TEMP\Furk Mark\FurMark.exe"
+Expand-Archive "$env:TEMP\FurMark.zip" -DestinationPath "$env:TEMP\FurMark" -ErrorAction SilentlyContinue
+# start furmark
+Start-Process "$env:TEMP\FurMark\FurMark.exe"
 Clear-Host
 Write-Host "Run a basic GPU stress test."
 Write-Host ""
