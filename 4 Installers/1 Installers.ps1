@@ -210,6 +210,8 @@ Start-Process -FilePath $FirefoxInstaller `
     -ArgumentList "/S" `
     -Wait `
     -NoNewWindow
+# uninstall mozilla maintenance service
+Start-Process -FilePath "C:\Program Files (x86)\Mozilla Maintenance Service\uninstall.exe" -ArgumentList "/S" -WindowStyle Hidden -Wait
 show-menu
 
       }
