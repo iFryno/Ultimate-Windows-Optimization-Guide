@@ -139,9 +139,10 @@ Write-Host "Installing: Epic Games . . ."
 Get-FileFromWeb -URL "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-15.17.1.msi?launcherfilename=EpicInstaller-15.17.1.msi" -File "$env:TEMP\Epic Games.msi"
 # install epic games
 Start-Process -wait "$env:TEMP\Epic Games.msi" -ArgumentList "/quiet"
-# disable epic online services
-Stop-Service -Name "EpicOnlineServices" -Force -ErrorAction SilentlyContinue
-Set-Service -Name "EpicOnlineServices" -StartupType Disabled
+Clear-Host
+Write-Host "Uninstall: Epic Online Services . . ."
+# uninstall epic online services
+cmd /c "msiexec.exe /x {57A956AB-4BCC-45C6-9B40-957E4E125568} /qn >nul 2>&1"
 show-menu
 
       }
@@ -176,28 +177,22 @@ Get-FileFromWeb -URL "https://dl.google.com/dl/chrome/install/googlechromestanda
 # install google chrome
 Start-Process -wait "$env:TEMP\Chrome.msi" -ArgumentList "/quiet"
 # add chrome policies
-Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'StartupBoostEnabled' /t REG_DWORD /d '0' /f | Out-Null
-Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'HardwareAccelerationModeEnabled' /t REG_DWORD /d '0' /f | Out-Null
-Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'BackgroundModeEnabled' /t REG_DWORD /d '0' /f | Out-Null
-Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome' /v 'HighEfficiencyModeEnabled' /t REG_DWORD /d '1' /f | Out-Null
-<<<<<<< HEAD
+cmd /c "reg add `"HKLM\SOFTWARE\Policies\Google\Chrome`" /v `"StartupBoostEnabled`" /t REG_DWORD /d `"0`" /f >nul 2>&1"
+cmd /c "reg add `"HKLM\SOFTWARE\Policies\Google\Chrome`" /v `"HardwareAccelerationModeEnabled`" /t REG_DWORD /d `"0`" /f >nul 2>&1"
+cmd /c "reg add `"HKLM\SOFTWARE\Policies\Google\Chrome`" /v `"BackgroundModeEnabled`" /t REG_DWORD /d `"0`" /f >nul 2>&1"
+cmd /c "reg add `"HKLM\SOFTWARE\Policies\Google\Chrome`" /v `"HighEfficiencyModeEnabled`" /t REG_DWORD /d `"1`" /f >nul 2>&1"
 # remove logon chrome
 cmd /c "reg delete `"HKLM\Software\Microsoft\Active Setup\Installed Components\{8A69D345-D564-463c-AFF1-A69D9E530F96}`" /f >nul 2>&1"
-=======
->>>>>>> bdc8b9c58ba89fa363bbfdac589910b3a3d3bf56
 # disable chrome services
 $services = Get-Service | Where-Object { $_.Name -match 'Google' }
 foreach ($service in $services) {
 Set-Service -Name $service.Name -StartupType Disabled
 Stop-Service -Name $service.Name -Force
 }
-<<<<<<< HEAD
 # remove chrome tasks
 Get-ScheduledTask | Where-Object {$_.Taskname -match 'GoogleUpdateTaskMachineCore'} | Unregister-ScheduledTask -Confirm:$false
 Get-ScheduledTask | Where-Object {$_.Taskname -match 'GoogleUpdateTaskMachineUA'} | Unregister-ScheduledTask -Confirm:$false
 Get-ScheduledTask | Where-Object {$_.Taskname -match 'GoogleUpdaterTaskSystem'} | Unregister-ScheduledTask -Confirm:$false
-=======
->>>>>>> bdc8b9c58ba89fa363bbfdac589910b3a3d3bf56
 # open ublock origin in web browser
 Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh?hl=en"
 show-menu
@@ -327,7 +322,7 @@ show-menu
 Clear-Host
 Write-Host "Installing: OBS Studio . . ."
 # download obs studio
-Get-FileFromWeb -URL "https://github.com/obsproject/obs-studio/releases/download/31.0.2/OBS-Studio-31.0.2-Windows-Installer.exe" -File "$env:TEMP\OBS Studio.exe"
+Get-FileFromWeb -URL "https://github.com/obsproject/obs-studio/releases/download/32.0.4/OBS-Studio-32.0.4-Windows-x64-Installer.exe" -File "$env:TEMP\OBS Studio.exe"
 # install obs studio
 Start-Process -wait "$env:TEMP\OBS Studio.exe" -ArgumentList "/S"
 show-menu

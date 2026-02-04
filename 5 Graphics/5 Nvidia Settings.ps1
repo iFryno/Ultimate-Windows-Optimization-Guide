@@ -65,7 +65,6 @@ $MultilineComment = @"
     <Executeables />
     <Settings>
       <ProfileSetting>
-<<<<<<< HEAD
         <SettingNameInfo> </SettingNameInfo>
         <SettingID>390467</SettingID>
         <SettingValue>2</SettingValue>
@@ -80,65 +79,37 @@ $MultilineComment = @"
       <ProfileSetting>
         <SettingNameInfo>Texture filtering - Negative LOD bias</SettingNameInfo>
         <SettingID>1686376</SettingID>
-=======
-        <SettingNameInfo>Frame Rate Limiter V3</SettingNameInfo>
-        <SettingID>277041154</SettingID>
->>>>>>> bdc8b9c58ba89fa363bbfdac589910b3a3d3bf56
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>GSYNC - Application Mode</SettingNameInfo>
-        <SettingID>294973784</SettingID>
+        <SettingNameInfo>Texture filtering - Trilinear optimization</SettingNameInfo>
+        <SettingID>3066610</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>GSYNC - Application State</SettingNameInfo>
-        <SettingID>279476687</SettingID>
-        <SettingValue>4</SettingValue>
+        <SettingNameInfo>Vertical Sync Tear Control</SettingNameInfo>
+        <SettingID>5912412</SettingID>
+        <SettingValue>2525368439</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>GSYNC - Global Feature</SettingNameInfo>
-        <SettingID>278196567</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>GSYNC - Global Mode</SettingNameInfo>
-        <SettingID>278196727</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>GSYNC - Indicator Overlay</SettingNameInfo>
-        <SettingID>268604728</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Maximum Pre-Rendered Frames</SettingNameInfo>
-        <SettingID>8102046</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Preferred Refresh Rate</SettingNameInfo>
+        <SettingNameInfo>Preferred refresh rate</SettingNameInfo>
         <SettingID>6600001</SettingID>
         <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Ultra Low Latency - CPL State</SettingNameInfo>
-        <SettingID>390467</SettingID>
-        <SettingValue>2</SettingValue>
+        <SettingNameInfo>Maximum pre-rendered frames</SettingNameInfo>
+        <SettingID>8102046</SettingID>
+        <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Ultra Low Latency - Enabled</SettingNameInfo>
-        <SettingID>277041152</SettingID>
-        <SettingValue>1</SettingValue>
+        <SettingNameInfo>Texture filtering - Anisotropic filter optimization</SettingNameInfo>
+        <SettingID>8703344</SettingID>
+        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -148,25 +119,49 @@ $MultilineComment = @"
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Vertical Sync - Smooth AFR Behavior</SettingNameInfo>
+        <SettingNameInfo>Shader disk cache maximum size</SettingNameInfo>
+        <SettingID>11306135</SettingID>
+        <SettingValue>4294967295</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Texture filtering - Quality</SettingNameInfo>
+        <SettingID>13510289</SettingID>
+        <SettingValue>20</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Texture filtering - Anisotropic sample optimization</SettingNameInfo>
+        <SettingID>15151633</SettingID>
+        <SettingValue>1</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Display the VRR Indicator</SettingNameInfo>
+        <SettingID>268604728</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Flag to control smooth AFR behavior</SettingNameInfo>
         <SettingID>270198627</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Vertical Sync - Tear Control</SettingNameInfo>
-        <SettingID>5912412</SettingID>
-        <SettingValue>2525368439</SettingValue>
+        <SettingNameInfo>Anisotropic filtering setting</SettingNameInfo>
+        <SettingID>270426537</SettingID>
+        <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Vulkan/OpenGL Present Method</SettingNameInfo>
-        <SettingID>550932728</SettingID>
-        <SettingValue>0</SettingValue>
+        <SettingNameInfo>Power management mode</SettingNameInfo>
+        <SettingID>274197361</SettingID>
+        <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Antialiasing - Gamma Correction</SettingNameInfo>
+        <SettingNameInfo>Antialiasing - Gamma correction</SettingNameInfo>
         <SettingID>276652957</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
@@ -178,7 +173,6 @@ $MultilineComment = @"
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-<<<<<<< HEAD
         <SettingNameInfo>FRL Low Latency</SettingNameInfo>
         <SettingID>277041152</SettingID>
         <SettingValue>1</SettingValue>
@@ -221,83 +215,33 @@ $MultilineComment = @"
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-=======
->>>>>>> bdc8b9c58ba89fa363bbfdac589910b3a3d3bf56
         <SettingNameInfo>Antialiasing - Setting</SettingNameInfo>
         <SettingID>282555346</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Anisotropic Filter - Optimization</SettingNameInfo>
-        <SettingID>8703344</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Anisotropic Filter - Sample Optimization</SettingNameInfo>
-        <SettingID>15151633</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Anisotropic Filtering - Mode</SettingNameInfo>
-        <SettingID>282245910</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Anisotropic Filtering - Setting</SettingNameInfo>
-        <SettingID>270426537</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Texture Filtering - Negative LOD Bias</SettingNameInfo>
-        <SettingID>1686376</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Texture Filtering - Quality</SettingNameInfo>
-        <SettingID>13510289</SettingID>
-        <SettingValue>20</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Texture Filtering - Trilinear Optimization</SettingNameInfo>
-        <SettingID>3066610</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>CUDA - Sysmem Fallback Policy</SettingNameInfo>
+        <SettingNameInfo>CUDA Sysmem Fallback Policy</SettingNameInfo>
         <SettingID>283962569</SettingID>
         <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Power Management - Mode</SettingNameInfo>
-        <SettingID>274197361</SettingID>
-        <SettingValue>1</SettingValue>
+        <SettingNameInfo>Enable G-SYNC globally</SettingNameInfo>
+        <SettingID>294973784</SettingID>
+        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Shader Cache - Cache Size</SettingNameInfo>
-        <SettingID>11306135</SettingID>
-        <SettingValue>4294967295</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Threaded Optimization</SettingNameInfo>
-        <SettingID>549528094</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>OpenGL GDI Compatibility</SettingNameInfo>
+        <SettingNameInfo>OpenGL GDI compatibility</SettingNameInfo>
         <SettingID>544392611</SettingID>
         <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Threaded optimization</SettingNameInfo>
+        <SettingID>549528094</SettingID>
+        <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -306,7 +250,6 @@ $MultilineComment = @"
         <SettingValue>id,2.0:268410DE,00000100,GF - (400,2,161,24564) @ (0)</SettingValue>
         <ValueType>String</ValueType>
       </ProfileSetting>
-<<<<<<< HEAD
       <ProfileSetting>
         <SettingNameInfo>Vulkan/OpenGL present method</SettingNameInfo>
         <SettingID>550932728</SettingID>
@@ -319,8 +262,6 @@ $MultilineComment = @"
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
-=======
->>>>>>> bdc8b9c58ba89fa363bbfdac589910b3a3d3bf56
     </Settings>
   </Profile>
 </ArrayOfProfile>

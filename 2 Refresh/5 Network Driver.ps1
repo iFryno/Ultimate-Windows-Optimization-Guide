@@ -11,8 +11,4 @@
 $instanceID = (Get-CimInstance Win32_BaseBoard).Product
 $query = [uri]::EscapeDataString($instanceID)
 # search motherboard id in web browser
-<<<<<<< HEAD
 Start-Process "https://www.google.com/search?q=$query"
-=======
-Start-Process "https://www.google.com/search?q=$query"
->>>>>>> bdc8b9c58ba89fa363bbfdac589910b3a3d3bf56
