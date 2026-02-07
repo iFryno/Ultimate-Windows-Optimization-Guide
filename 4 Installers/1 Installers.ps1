@@ -74,7 +74,7 @@
 	show-menu
     while ($true) {
     $choice = Read-Host " "
-    if ($choice -match '^(1[0-7]|[1-9])$') {
+    if ($choice -match '^(1[0-8]|[1-9])$') {
     switch ($choice) {
     1 {
 
@@ -384,4 +384,4 @@ Start-Process "$env:TEMP\Valorant.exe"
 show-menu
 
       }
-    } } else { Write-Host "Invalid input. Please select a valid option (1-17)." } }
+    } } else { Write-Host "Invalid input. Please select a valid option (1-18)." } }
