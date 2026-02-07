@@ -60,7 +60,7 @@ $path = "$env:TEMP\NewStartMenu.reg"
 # import reg file
 Regedit.exe /S "$env:TEMP\NewStartMenu.reg"
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
@@ -112,7 +112,7 @@ $path = "$env:TEMP\OldStartMenu.reg"
 # import reg file
 Regedit.exe /S "$env:TEMP\OldStartMenu.reg"
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
