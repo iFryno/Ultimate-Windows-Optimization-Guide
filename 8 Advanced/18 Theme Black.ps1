@@ -62,7 +62,7 @@ $path = "$env:TEMP\BlackTheme.reg"
 # import reg file
 Regedit.exe /S "$env:TEMP\BlackTheme.reg"
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
@@ -116,7 +116,7 @@ $path = "$env:TEMP\DefaultTheme.reg"
 # import reg file
 Regedit.exe /S "$env:TEMP\DefaultTheme.reg"
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
