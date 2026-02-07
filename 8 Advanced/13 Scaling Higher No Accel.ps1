@@ -22,7 +22,7 @@
     1 {
 
 Clear-Host
-Write-Host "100%..."
+Write-Host "100% . . ."
 # create reg file
 $MultilineComment = @"
 Windows Registry Editor Version 5.00
@@ -66,7 +66,7 @@ Set-Content -Path "$env:TEMP\100%.reg" -Value $MultilineComment -Force
 Regedit.exe /S "$env:TEMP\100%.reg"
 Timeout /T 5 | Out-Null
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
@@ -74,7 +74,7 @@ exit
     2 {
 
 Clear-Host
-Write-Host "125%..."
+Write-Host "125% . . ."
 # create reg file
 $MultilineComment = @"
 Windows Registry Editor Version 5.00
@@ -118,7 +118,7 @@ Set-Content -Path "$env:TEMP\125%.reg" -Value $MultilineComment -Force
 Regedit.exe /S "$env:TEMP\125%.reg"
 Timeout /T 5 | Out-Null
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
@@ -126,7 +126,7 @@ exit
     3 {
 
 Clear-Host
-Write-Host "150%..."
+Write-Host "150% . . ."
 # create reg file
 $MultilineComment = @"
 Windows Registry Editor Version 5.00
@@ -170,7 +170,7 @@ Set-Content -Path "$env:TEMP\150%.reg" -Value $MultilineComment -Force
 Regedit.exe /S "$env:TEMP\150%.reg"
 Timeout /T 5 | Out-Null
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
@@ -178,7 +178,7 @@ exit
     4 {
 
 Clear-Host
-Write-Host "175%..."
+Write-Host "175% . . ."
 # create reg file
 $MultilineComment = @"
 Windows Registry Editor Version 5.00
@@ -222,7 +222,7 @@ Set-Content -Path "$env:TEMP\175%.reg" -Value $MultilineComment -Force
 Regedit.exe /S "$env:TEMP\175%.reg"
 Timeout /T 5 | Out-Null
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
@@ -230,7 +230,7 @@ exit
     5 {
 
 Clear-Host
-Write-Host "200%..."
+Write-Host "200% . . ."
 # create reg file
 $MultilineComment = @"
 Windows Registry Editor Version 5.00
@@ -274,7 +274,7 @@ Set-Content -Path "$env:TEMP\200%.reg" -Value $MultilineComment -Force
 Regedit.exe /S "$env:TEMP\200%.reg"
 Timeout /T 5 | Out-Null
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
@@ -282,7 +282,7 @@ exit
     6 {
 
 Clear-Host
-Write-Host "225%..."
+Write-Host "225% . . ."
 # create reg file
 $MultilineComment = @"
 Windows Registry Editor Version 5.00
@@ -326,7 +326,7 @@ Set-Content -Path "$env:TEMP\225%.reg" -Value $MultilineComment -Force
 Regedit.exe /S "$env:TEMP\225%.reg"
 Timeout /T 5 | Out-Null
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
