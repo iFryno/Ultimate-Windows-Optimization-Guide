@@ -97,7 +97,7 @@ Reg.exe delete 'HKCR\*\shellex\ContextMenuHandlers\ModernSharing' /f >$null 2>&1
 # remove scan with defender
 Reg.exe add 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked' /v '{09A47860-11B0-4DA5-AFA5-26D86198A780}' /t REG_SZ /d `"`" /f >$null 2>&1
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
@@ -286,7 +286,7 @@ Reg.exe delete 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\
 $path = New-Item -Path "$env:TEMP\RestoreContext.reg" -Value $regFile -Force 
 Start-Process regedit.exe -ArgumentList "/s $($path.FullName)"
 Clear-Host
-Write-Host "Restart to apply..."
+Write-Host "Restart to apply . . ."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
