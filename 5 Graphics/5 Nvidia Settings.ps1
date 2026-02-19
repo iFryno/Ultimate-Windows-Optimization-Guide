@@ -127,7 +127,7 @@ $MultilineComment = @"
       <ProfileSetting>
         <SettingNameInfo>Vertical Sync</SettingNameInfo>
         <SettingID>11041231</SettingID>
-        <SettingValue>1620202130</SettingValue>
+        <SettingValue>138504007</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -181,7 +181,7 @@ $MultilineComment = @"
       <ProfileSetting>
         <SettingNameInfo>Anisotropic Filtering - Mode</SettingNameInfo>
         <SettingID>282245910</SettingID>
-        <SettingValue>0</SettingValue>
+        <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -209,6 +209,12 @@ $MultilineComment = @"
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
+        <SettingNameInfo>CUDA - Force P2 State</SettingNameInfo>
+        <SettingID>1343646814</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+	  <ProfileSetting>
         <SettingNameInfo>CUDA - Sysmem Fallback Policy</SettingNameInfo>
         <SettingID>283962569</SettingID>
         <SettingValue>1</SettingValue>
